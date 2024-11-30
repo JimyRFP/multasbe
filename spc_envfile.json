@@ -1,0 +1,9 @@
+{
+    "DATABASE":{
+        "DATABASE":"multas",
+        "USERNAME":"postgres",
+        "PASSWORD":"pass",
+        "HOST":"localhost",
+        "PORT":5433
+    }
+}

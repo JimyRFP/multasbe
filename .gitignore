@@ -1,0 +1,5 @@
+node_modules
+logs
+editals/sc/*
+!editals/sc/.gitkeep
+dist
