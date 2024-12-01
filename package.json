@@ -16,7 +16,7 @@
     "meta-sanitizer": "^2.1.7",
     "pdf-parse": "^1.1.1",
     "sequelize": "^6.37.5",
-    "serverpreconfigured": "^2.2.18",
+    "serverpreconfigured": "^2.2.19",
     "whatsapp_with_token": "^0.0.6-Alpha"
   },
   "devDependencies": {
