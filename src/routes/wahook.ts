@@ -9,6 +9,7 @@ import { botTrigger } from "../bot/trigger";
 import { LogSeverity, saveLog } from "serverpreconfigured/dist/logs/logs";
 import { justNumbers } from "meta-sanitizer/dist/justNumbers";
 import { getWaDbWithPhone } from "../whatsapp/api/client";
+import { phonewith9 } from "../utils/phones";
 
 export const router=Router();
 
@@ -117,8 +118,12 @@ export async function saveMessageAndCallBot(message:WAMessageHook,botNumber:stri
                break;    
       }  
       text=meta_sanitizer.queryProtector(text);
+      const from=phonewith9(message.from);
+      if(!from){
+         throw "error on message";
+      }
       const msgsave=await WAMessages.create({
-          sender:message.from,
+          sender:from,
           receiver:botNumber,
           type:message.type,
           text:text,
@@ -126,7 +131,7 @@ export async function saveMessageAndCallBot(message:WAMessageHook,botNumber:stri
       });
       botTrigger({
          botNumber:botNumber,
-         clientNumber:message.from,
+         clientNumber:from,
          text:text,
       });
    }catch(e){
