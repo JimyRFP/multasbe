@@ -7,7 +7,7 @@ import ExpressServer from "serverpreconfigured";
 const waServer=Express();
 const userServer=new ExpressServer();
 export function startWaServer(){
-    waServer.use('/wa/',routerWa);
+    waServer.use('/wa',routerWa);
     waServer.listen(1111);
 }
 export function startUserServer(){
