@@ -49,6 +49,7 @@ export async function shot(botPhone:string,warning:DetranWarning,person:Person){
      for(let ph of phones){
            await waSendAskIsPerson1(botPhone,person.name,ph);
            const chat=await getOrCreateChat(botPhone,ph);
+           chat.warning_id=warning.id;
            chat.current_state=BotState.sendNotification;
            await chat.save();
      }
