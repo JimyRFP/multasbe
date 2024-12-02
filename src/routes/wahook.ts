@@ -36,12 +36,6 @@ router.post('/hook/:number/:token',express.raw({type:'application/json'}),async 
     if(!xHubSignature){
           throw "Invalid signature";
     }
-    await saveLog({
-      data:req.body,
-      severity:LogSeverity.info,
-      addPath:'wa_hook',
-      filePrefix:`${new Date().getTime()}`
-    })
     const entrys=JSON.parse(req.body).entry;
     
     if(!entrys){

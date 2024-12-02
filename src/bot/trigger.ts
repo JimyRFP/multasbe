@@ -19,7 +19,8 @@ async function botEvent(data:{from:string,to:string,message:string}){
       const nextState=await botGetNextState(chat,[{type:WhatsAppMessageType.text,text:data.message}]);
       await updateChatState(chat,nextState);
     }catch(e){
-      throw e;
+
+      console.log(e);
    }
 }
 async function isBlocked(chat:BotChat){
