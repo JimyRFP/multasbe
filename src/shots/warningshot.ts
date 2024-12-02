@@ -35,8 +35,8 @@ export async function shotDetranWarning(){
           if(phones.length>4){
                continue;
           }
-          continue;
-         // await shot(waShot.phone,warning,warning.Person);
+          
+         await shot(waShot.phone,warning,warning.Person);
             
       }
     }catch(e){
