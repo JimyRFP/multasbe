@@ -3,7 +3,7 @@ import { justChatsOrSpace } from "../utils/strings/justchars";
 import { removeMultipleSpaces } from "../utils/strings/space";
 
 const positive=['sim','quero','pode ser','confirmar','sou eu','sim, sou eu','eu mesmo','s','e','ss','e sim'];
-const negative=['nao','melhor nao','nao sou eu','nao e','nao quero','cancela','sair','nn'];
+const negative=['nao','nao sou','nao conheco','melhor nao','nao sou eu','nao e','nao quero','cancela','sair','nn'];
 
 export function afirmationResult(text:string):'positive'|'negative'|'undetermined'{
    let cleantext=removeAccentuation(text);

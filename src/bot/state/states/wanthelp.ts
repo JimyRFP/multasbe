@@ -28,7 +28,7 @@ export async function wantHelpGetNextState(chat:BotChat,message:Message){
          }
        }else if(isOrNo=='negative'){
           nextState={
-             state:BotState.notWantHelp,
+             state:BotState.notIsCnh,
              message:[{
                 type:WhatsAppMessageType.text,
                 text:`Compreendido. Visto que o número de registro não coincide, concluímos que você não é a pessoa mencionada no edital.\nPedimos desculpas pelo transtorno.`,

@@ -21,7 +21,7 @@ export async function sendNotificationGetNextState(chat:BotChat,message:Message)
             state:BotState.isPerson,
             message:[{
                 type:WhatsAppMessageType.text,
-                text:`${getFirstName(person.name)}, seu nome foi listado no Diário Oficial da União, notificando que você está sujeito a um processo que pode suspender o seu direito de dirigir. Sou representante de uma empresa especializada em auxiliar nesses casos e gostaria de oferecer nosso suporte para recorrer dessa decisão. Você tem interesse em saber mais?`,
+                text:`${getFirstName(person.name)}, seu nome foi listado no Diário Oficial da União, notificando que você está sujeito a um processo que pode suspender o seu direito de dirigir. Eu posso te auxiliar nesse caso e gostaria de oferecer nosso suporte para recorrer dessa decisão. Você tem interesse em saber mais?`,
             }]
           }
        }else if(isOrNo=='negative'){
